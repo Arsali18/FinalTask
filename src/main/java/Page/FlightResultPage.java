@@ -24,4 +24,8 @@ public class FlightResultPage {
         Thread.sleep(2000);
         flightResultsObjectRepository.selectButton.click();
     }
+
+    public void verifyContactDetails(){
+        driver.findElement(flightResultsObjectRepository.verifyContactDetail);
+    }
 }

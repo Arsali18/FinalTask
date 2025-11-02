@@ -24,6 +24,8 @@ public class FlightResultsObjectRepository {
     @FindBy(xpath = "//button[@data-component='flight-card-bookButton']")
     public WebElement selectButton;
 
+    public By verifyContactDetail =By.xpath("//h3[normalize-space()='Contact details']");
+
     public FlightResultsObjectRepository(WebDriver driver){
         PageFactory.initElements(driver, this);
     }

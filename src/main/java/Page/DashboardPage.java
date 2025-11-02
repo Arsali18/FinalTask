@@ -67,6 +67,10 @@ public class DashboardPage {
         dashboardObjectRepository.searchButton.click();
     }
 
+    public void verifyFlightLable(){
+        driver.findElement(dashboardObjectRepository.verifyFlightLable);
+    }
+
 }
 
 

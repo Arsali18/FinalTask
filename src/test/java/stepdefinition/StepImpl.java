@@ -70,7 +70,8 @@ public class StepImpl {
 
     @Then("user navigate is navigated to result page")
     public void user_navigate_is_navigated_to_result_page() {
-        throw new io.cucumber.java.PendingException();
+        DashboardPage dashboardPage = new DashboardPage(driver);
+        dashboardPage.verifyFlightLable();
     }
 
 
@@ -83,6 +84,7 @@ public class StepImpl {
 
     @Then("user navigate is navigated to customer information page")
     public void user_navigate_is_navigated_to_customer_information_page() {
-        throw new io.cucumber.java.PendingException();
+        FlightResultPage flightResultPage = new FlightResultPage(driver);
+        flightResultPage.verifyContactDetails();
     }
 }

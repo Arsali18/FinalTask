@@ -39,7 +39,10 @@ public class ScenarioTestFinal {
         dashboardPage.klikButtonSeach();
         Thread.sleep(10000);
 
+        dashboardPage.verifyFlightLable();
+
         flightResultPage.pickTicket();
+        flightResultPage.verifyContactDetails();
         Thread.sleep(3000);
 
     }

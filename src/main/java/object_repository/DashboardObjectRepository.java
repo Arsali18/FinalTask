@@ -44,6 +44,8 @@ public class DashboardObjectRepository {
     @FindBy(css = "button[data-test='SearchButtonBox")
     public WebElement searchButton;
 
+    public By verifyFlightLable = By.xpath("//h2[normalize-space()='Flights from Jakarta to Singapore']");
+
 
 
     public DashboardObjectRepository(WebDriver driver) {
