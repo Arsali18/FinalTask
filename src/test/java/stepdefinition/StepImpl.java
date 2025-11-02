@@ -69,9 +69,10 @@ public class StepImpl {
     }
 
     @Then("user navigate is navigated to result page")
-    public void user_navigate_is_navigated_to_result_page() {
+    public void user_navigate_is_navigated_to_result_page() throws InterruptedException {
         DashboardPage dashboardPage = new DashboardPage(driver);
         dashboardPage.verifyFlightLable();
+        Thread.sleep(3500);
     }
 
 

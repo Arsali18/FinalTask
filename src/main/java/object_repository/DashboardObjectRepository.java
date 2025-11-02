@@ -38,7 +38,7 @@ public class DashboardObjectRepository {
 
     public By destinationList = By.xpath("//div[@class='Popup AutocompleteSearch__Popup']//li");
 
-    @FindBy(xpath = "//span[@data-selenium-date='2025-11-02']")
+    @FindBy(xpath = "//span[@data-selenium-date='2025-11-03']")
     public WebElement setDate;
 
     @FindBy(css = "button[data-test='SearchButtonBox")
