@@ -37,7 +37,7 @@ public class ScenarioTestFinal {
         Thread.sleep(3000);
         dashboardPage.selectDate();
         dashboardPage.klikButtonSeach();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
 
         flightResultPage.pickTicket();
         Thread.sleep(3000);
