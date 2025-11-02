@@ -11,7 +11,7 @@ public class FlightResultsObjectRepository {
 
     public By airLineSection = By.id("Airlines");
 
-    @FindBy(xpath = "//label[@data-element-value='AirAsia']//div[contains(@class,'CheckboxStyled')]")
+    @FindBy(xpath = "//label[@data-element-value='AirAsia']")
     public WebElement checkBoxAirAsia;
 
     @FindBy(xpath = "//button[contains(@data-testid,'flights-quick-sort-item-Price-button')]")

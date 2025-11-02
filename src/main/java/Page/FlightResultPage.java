@@ -1,22 +1,24 @@
 package Page;
 
+import abstractcomponents.AbstractComponents;
 import object_repository.FlightResultsObjectRepository;
 import org.junit.experimental.theories.Theories;
 import org.openqa.selenium.WebDriver;
 
-public class FlightResultPage {
+public class FlightResultPage extends AbstractComponents {
     private FlightResultsObjectRepository flightResultsObjectRepository;
     WebDriver driver;
 
     public FlightResultPage(WebDriver driver){
+        super(driver);
         this.driver=driver;
         this.flightResultsObjectRepository=new FlightResultsObjectRepository(driver);
     }
 
     public void pickTicket() throws InterruptedException {
-        driver.findElement(flightResultsObjectRepository.airLineSection);
-        Thread.sleep(5000);
-        System.out.println(flightResultsObjectRepository.checkBoxAirAsia.getText());
+        visibilityElement(flightResultsObjectRepository.airLineSection);
+        //driver.findElement(flightResultsObjectRepository.airLineSection);
+       // System.out.println(flightResultsObjectRepository.checkBoxAirAsia.getText());
         flightResultsObjectRepository.checkBoxAirAsia.click();
         flightResultsObjectRepository.cheapestBtn.click();
         Thread.sleep(1000);
@@ -26,6 +28,6 @@ public class FlightResultPage {
     }
 
     public void verifyContactDetails(){
-        driver.findElement(flightResultsObjectRepository.verifyContactDetail);
+        visibilityElement(flightResultsObjectRepository.verifyContactDetail);
     }
 }

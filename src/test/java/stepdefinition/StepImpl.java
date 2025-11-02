@@ -45,14 +45,14 @@ public class StepImpl {
     public void user_set_destination_airport() throws InterruptedException {
         DashboardPage dashboardPage=new DashboardPage(driver);
         dashboardPage.searchAirportArival("Singapore");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     @And("user select destination airport")
     public void user_select_destination_airport() throws InterruptedException {
         DashboardPage dashboardPage=new DashboardPage(driver);
         dashboardPage.selectArivalAirport("Singapore Changi Airport");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     @And("user sets departure date")
@@ -65,22 +65,22 @@ public class StepImpl {
     public void user_click_button_Search() throws InterruptedException {
         DashboardPage dashboardPage=new DashboardPage(driver);
         dashboardPage.klikButtonSeach();
-        Thread.sleep(10000);
+        Thread.sleep(3000);
     }
 
     @Then("user navigate is navigated to result page")
     public void user_navigate_is_navigated_to_result_page() throws InterruptedException {
         DashboardPage dashboardPage = new DashboardPage(driver);
         dashboardPage.verifyFlightLable();
-        Thread.sleep(3500);
+        Thread.sleep(15000);
     }
 
 
-    @When("user selects a ticket")
-    public void user_selects_a_ticket() throws InterruptedException {
+    @When("user select ticket")
+    public void user_select_ticket() throws InterruptedException {
         FlightResultPage flightResultPage = new FlightResultPage(driver);
         flightResultPage.pickTicket();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     @Then("user navigate is navigated to customer information page")
